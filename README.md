@@ -4,7 +4,19 @@ Ask questions about any folder on your Mac, such as Desktop or Documents, and ge
 
 Every answer has **Like**, **Accept** and **Flag wrong** buttons. Your votes change how results rank next time, and accepted answers build a personal bank of **verified Q&A**.
 
-> Your folder is only **read**. Nothing in it is changed, moved or deleted. The index and your votes live in `~/.folder-qa/`.
+> Your folder is only **read**. Nothing in it is changed, moved or deleted.
+
+## Use it in your browser (no install)
+
+**https://gurjeetbit.github.io/folder-qa/**
+
+Click **Choose folder**, pick a folder such as Desktop, and ask a question. Everything runs inside the browser tab: your files are read there and never uploaded. Votes and verified answers are saved in that browser, and you can export them from Settings.
+
+- Works in Chrome, Edge, Safari and Firefox on a Mac or PC. It isn't for phones, which can't open a whole folder.
+- Answers are built from the most relevant sentences in your files, with [1] citations you can tap. If you add an Anthropic API key in Settings, it writes fuller answers instead, but the top passages are then sent to the API.
+- On later visits, unchanged files load from the browser cache, so refreshing is quick.
+
+The Python app below adds fully private written answers via Ollama, semantic (embedding) search, and a command line. The index and votes for it live in `~/.folder-qa/`.
 
 ```
 Your folder ──► Index (text from PDF, Word, PowerPoint, Excel, txt, md…, split into passages)
